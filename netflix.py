@@ -122,6 +122,8 @@ class NetflixAPI(object):
             url = self.api_base + endpoint
 
         if format == 'json':
+            if params == None:
+                params = {}
             params.update({'output': 'json'})
 
         if method != 'GET':
